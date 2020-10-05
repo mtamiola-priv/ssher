@@ -45,7 +45,7 @@ those inventory also might be dynamic (in cloud) so keeping ssh config file up t
 But we have yaml file with server IP/bastion mapping, so we can utilize that. 
 ssher is actually bash alias combining jq/yq agility with SSH command
 
-Add to your existing file .bash_aliases (or create new of if does not exists) content of file .bash_aliases, start new shell and just launch 
+Add to your existing file *~/.bash_aliases* (or create new of if does not exists) content of file [.bash_aliases_ssher](.bash_aliases_ssher), start new shell and just launch 
 
 ```
 ssher server1

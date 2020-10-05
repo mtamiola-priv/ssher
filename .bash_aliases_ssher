@@ -1,0 +1,5 @@
+ssher(){
+    BASTION_IP=$(yq -r --arg SERVER $1 '.|to_entries[]|select(.key==$SERVER).value.bastion' inventory.yml)
+    HOST_IP=$(yq -r --arg SERVER $1 '.|to_entries[]|select(.key==$SERVER).value.ip' inventory.yml)
+    ssh -v ubuntu@$HOST_IP -o "ProxyCommand=ssh -W %h:%p -x $BASTION_IP"
+}
